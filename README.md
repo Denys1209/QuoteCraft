@@ -1,3 +1,28 @@
+# QuoteCraft
+
+aim of project:
+
+Give students the ability to search for quotes fast and share their notes and thoughts on them for Leaving Cert English Ireland 
+
+Tech task
+
+1)User login/Log out
+
+    1)User should be able to create quotes
+
+    2)Add quotes for text with tags
+
+    3)Make quotes public if they want 
+
+    4)Add quotes to favorite 
+
+
+
+2)User that isn't login should be able to search quotes by tags and/or world 
+
+3)Also sort quotes 
+
+
 # Next.js & HeroUI Template
 
 This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
