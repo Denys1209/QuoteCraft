@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .filterPanel {
+    @apply border-primary border-1 p-2 rounded-xl hover:shadow-secondary shadow-md ease-in delay-100;
+  }
+  
+  /* ... */
+}

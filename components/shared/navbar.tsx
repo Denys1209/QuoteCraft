@@ -20,7 +20,6 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site"; // Ensure this config is updated for QuoteCraft
 import { usePathname } from "next/navigation";
 import { Image } from "@heroui/image";
-import ThemeSwitcher from "./themeSwitcher";
 
 export const Navbar = () => {
   const pathanme = usePathname();

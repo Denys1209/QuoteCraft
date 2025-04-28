@@ -5,7 +5,6 @@ import React from "react";
 
 export default function AboutPage() {
   return (
-    <div className="bg-background dark:bg-dark-background text-foreground dark:text-dark-foreground">
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <header className="mb-12 text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-primary dark:text-dark-primary">
@@ -145,7 +144,6 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </div>
-    </div>
+  </div>
   );
 }

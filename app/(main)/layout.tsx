@@ -9,12 +9,15 @@ const layout = ({
     children: React.ReactNode;
 }) => {
     return (
-        <div className="relative flex flex-col h-screen">
+        <div className="relative flex flex-col min-h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-                {children}
+            <main className="container mx-auto max-w-7xl  bg-background px-6 flex-grow">
+                <div className=" min-h-screen dark:bg-dark-background text-foreground dark:text-dark-foreground">
+                        {children}
+
+                </div>
             </main>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
