@@ -35,7 +35,7 @@ const QuoteCard = (
         <div className="mb-4">
           <blockquote className="relative pl-4 border-l-4 border-primary dark:border-dark-primary">
             <p className="font-serif text-lg italic text-foreground dark:text-dark-foreground">
-              "{quote.quoteText}"
+              &quot;{quote.quoteText}&quot;
             </p>
           </blockquote>
         </div>

@@ -47,12 +47,12 @@ export default function AboutPage() {
           <div className="mb-4">
             <h3 className="font-heading text-xl font-medium mb-2">Currently Available:</h3>
             <ul className="list-disc pl-8 mb-4 font-sans">
-              <li>Complete quote collection for Shakespeare's "Macbeth"</li>
+              <li>Complete quote collection for Shakespeare&apos;s &quot;Macbeth&quot;</li>
             </ul>
           </div>
           <div>
             <h3 className="font-heading text-xl font-medium mb-2">Coming Soon:</h3>
-            <p className="mb-2 font-sans">We're actively working to expand our database to include quotes from:</p>
+            <p className="mb-2 font-sans">We&apos;re actively working to expand our database to include quotes from:</p>
             <ul className="list-disc pl-8 mb-4 font-sans space-y-1">
               <li>Additional Shakespearean plays</li>
               <li>Contemporary drama texts</li>
