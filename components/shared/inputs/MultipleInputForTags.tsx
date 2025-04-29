@@ -5,7 +5,7 @@ import { ReturnPageDto } from '@/appDtos/Shared/return-page-dto';
 import useGetPageOfItems from '@/hooks/useGetPageOfItems';
 import { TagService } from '@/services/crudServices/CrudTagService';
 import { SharedSelection } from '@heroui/system';
-import { Chip, Select, SelectedItems, SelectItem } from '@nextui-org/react';
+import { Chip, Select, SelectedItems, SelectItem, Tooltip } from '@nextui-org/react';
 import { LoadingState, SortDescriptor } from '@react-types/shared';
 import { Tags } from 'lucide-react';
 import React, { useEffect, useState } from 'react'

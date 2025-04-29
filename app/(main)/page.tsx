@@ -97,19 +97,16 @@ export default function Home() {
   if (loadingState != 'idle') {
     return <>
       <div className="container  py-6 ">
-      <div className="flex-col md:flex md:flex-row justify-between w-full">
-        <div className="flex md:hidden">
-        <ButtonToOpenFilterPanelOnMobile characterSlugOutside={characterSlug} tagSlugsOutside={tagSlugs ? tagSlugs?.split(',') : []}/>
-        </div>
+        <div className="flex-col md:flex md:flex-row-reverse justify-between w-full">
+          <div className="flex w-full md:w-1/4 md:my-5 ">
+            <FilterPanel characterSlugOutside={characterSlug} tagSlugsOutside={tagSlugs ? tagSlugs?.split(',') : []} />
+          </div>
           <div className="flex-col justify-start items-start w-full md:w-8/12">
             <div className="mt-5">
               <Loading />
             </div>
           </div>
-           <div className="hidden md:flex w-1/4 my-5">
-          <FilterPanel characterSlugOutside={characterSlug} tagSlugsOutside={tagSlugs ? tagSlugs?.split(',') : []} />
-        </div>
-         
+
         </div>
       </div>
     </>
@@ -118,9 +115,9 @@ export default function Home() {
 
   return (
     <div className="container  py-6 ">
-      <div className="flex-col md:flex md:flex-row justify-between w-full">
-        <div className="flex md:hidden">
-        <ButtonToOpenFilterPanelOnMobile characterSlugOutside={characterSlug} tagSlugsOutside={tagSlugs ? tagSlugs?.split(',') : []}/>
+      <div className="flex-col md:flex md:flex-row-reverse justify-between w-full">
+        <div className="flex w-full md:w-1/4 md:my-5 ">
+          <FilterPanel characterSlugOutside={characterSlug} tagSlugsOutside={tagSlugs ? tagSlugs?.split(',') : []} />
         </div>
         <div className="flex-col justify-start items-start w-full md:w-8/12">
           {
@@ -141,19 +138,16 @@ export default function Home() {
         bg-background 
         text-foreground/60 
       `}
-                role="status" 
-                aria-live="polite" 
+                role="status"
+                aria-live="polite"
               >
                 <Quote className="w-10 h-10 mb-4 text-foreground/40" strokeWidth={1.5} />
 
-                <p className="text-lg font-medium font-sans"> 
+                <p className="text-lg font-medium font-sans">
                   No quotes found.
                 </p>
               </div>
           }
-        </div>
-        <div className="hidden md:flex w-1/4 my-5">
-          <FilterPanel characterSlugOutside={characterSlug} tagSlugsOutside={tagSlugs ? tagSlugs?.split(',') : []} />
         </div>
 
       </div>

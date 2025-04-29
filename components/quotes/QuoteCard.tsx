@@ -6,6 +6,7 @@ import { Card, CardBody, CardFooter, CardHeader } from '@heroui/card';
 import { Button } from '@heroui/button';
 import { Divider } from '@heroui/divider';
 import { Chip } from '@heroui/chip';
+import { Tooltip } from '@nextui-org/react';
 
 
 const QuoteCard = (
@@ -87,15 +88,16 @@ const QuoteCard = (
       
       <CardFooter className="px-6 py-3 bg-background/50 dark:bg-dark-background/50 flex flex-wrap gap-2">
         {quote.tags.map((tag:GetLightTagDto, index) => (
+          <Tooltip key={index} content={tag.description}>
           <Chip 
-            key={index} 
             size="sm"
             variant="flat"
             color="secondary"
-            className="text-xs"
+            className="text-xs cursor-default"
           >
             {tag.name}
           </Chip>
+</Tooltip>
         ))}
       </CardFooter>
     </Card>
