@@ -43,9 +43,9 @@ const MultipleInputForTags = (
     }
 
 
-    const loadCharacters = useGetPageOfItems<GetLightTagDto, TagService>(
+    const loadTags = useGetPageOfItems<GetLightTagDto, TagService>(
         service,
-        "40",
+        "50",
         "1",
         sortDescriptor,
         setLoadingState,
@@ -59,10 +59,10 @@ const MultipleInputForTags = (
 
     useEffect(() => {
 
-        loadCharacters().then()
+        loadTags().then()
 
 
-    }, [loadCharacters]);
+    }, [loadTags]);
 
 
 
