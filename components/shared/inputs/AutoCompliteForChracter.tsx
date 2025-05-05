@@ -3,7 +3,7 @@ import { FilterDto } from '@/appDtos/Shared/filter-dto';
 import { ReturnPageDto } from '@/appDtos/Shared/return-page-dto';
 import useGetPageOfItems from '@/hooks/useGetPageOfItems';
 import { CharacterService } from '@/services/crudServices/CrudCharacterService';
-import { Autocomplete, AutocompleteItem } from '@nextui-org/react';
+import { Autocomplete, AutocompleteItem, Select, SelectItem } from '@nextui-org/react';
 import { LoadingState, SortDescriptor } from '@react-types/shared';
 import React, { useEffect, useState } from 'react'
 
@@ -52,24 +52,29 @@ const AutoCompliteForChracter = ({
   
 
   return (
-    <Autocomplete
+    <Select
       className="max-w-xs"
       isLoading={loadingState != "idle"}
-      defaultItems={items?.models ?? []}
-      defaultSelectedKey={currentValue as any}
+      items={items?.models ?? []}
+      defaultSelectedKeys={currentValue as any}
       label="Pick a Chracter"
       placeholder="Select a Character"
       variant="flat"
                 onSelectionChange={(e) => {
-                 onChange(e as string | undefined);
+                  if(e.currentKey == currentValue){
+                    onChange(undefined)
+                  }
+                  else{
+                 onChange(e.currentKey);
+                  }
                 }}
     >
       {(item) => (
-        <AutocompleteItem key={item.slug} className="capitalize">
+        <SelectItem key={item.slug} className="capitalize">
           {item.name}
-        </AutocompleteItem>
+        </SelectItem>
       )}
-    </Autocomplete> 
+    </Select> 
   );
 }
 
